@@ -1,0 +1,23 @@
+options:
+
+  - title: L'appartement
+    url: docs/appartement.html
+
+  - title: Le gîte du haut
+    url: docs/gitehaut.html
+
+  - title: La gîte du bas
+    url: docs/gitebas.html
+
+  - title: Les oliviers
+    url: docs/oliviers.html
+
+  - title: Le hameau des Montèzes
+    url: docs/hameau.html
+
+  - title: Activités dans la région
+    url: docs/activites.html
+
+  - title: Contact
+    url: docs/contact.html
+
