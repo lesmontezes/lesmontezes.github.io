@@ -1,5 +1,5 @@
 name: Montèzes
-baseurl: /gem
+baseurl: ""
 description: Le Bancel des Montèzes
 highlighter: rouge
 docs: true
