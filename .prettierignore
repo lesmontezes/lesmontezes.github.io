@@ -1,0 +1,6 @@
+# Ignore Markdown files (use markdownlint instead)
+*.md
+
+# Or ignore specific files
+# index.md
+# about.md

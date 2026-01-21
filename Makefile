@@ -1,9 +1,9 @@
-# Jekyll Container Management Makefile (Dual Targets)
+# Jekyll 4.4 Container Management Makefile
 
 # Configuration
-IMAGE_NAME := jekyll-custom:latest
+IMAGE_NAME := jekyll44:latest
 CONTAINER_NAME := lesmontezes
-PORT_MAIN := 4000
+PORT := 4000
 
 # Detect container runtime (Docker or Podman)
 CONTAINER_RUNTIME := $(shell command -v podman 2>/dev/null || command -v docker 2>/dev/null)
@@ -21,54 +21,55 @@ endif
 
 .DEFAULT_GOAL := help
 
-.PHONY: help build-jekyll-custom-image dev-main stop-main logs-main build-main
+.PHONY: help build-jekyll-image dev stop logs build clean
 
 help: ## Show this help message
-	@echo "Jekyll Container Management"
+	@echo "Jekyll 4.4 Container Management"
 	@echo ""
-	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  $(GREEN)%-16s$(NC) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  $(GREEN)%-20s$(NC) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@echo ""
 	@echo "Container Runtime: $(CONTAINER_RUNTIME)"
 	@echo "Image Name: $(IMAGE_NAME)"
 	@echo ""
 
-build-jekyll-custom-image: ## Build the custom Jekyll Docker image
-	@echo -e "$(GREEN)[INFO]$(NC) Building custom Jekyll Docker image..."
-	$(CONTAINER_RUNTIME) build -t $(IMAGE_NAME) -f docs/Dockerfile .
+build-jekyll-image: ## Build the Jekyll 4.4 Docker image
+	@echo -e "$(GREEN)[INFO]$(NC) Building Jekyll 4.4 Docker image..."
+	$(CONTAINER_RUNTIME) build -t $(IMAGE_NAME) .
 
-dev-main: stop-main ## Run main site container on port 4000
-	@echo -e "$(GREEN)[INFO]$(NC) Starting main site on :$(PORT_MAIN)..."
+dev: stop ## Run Jekyll development server on port 4000
+	@echo -e "$(GREEN)[INFO]$(NC) Starting Jekyll server on :$(PORT)..."
 ifeq ($(shell basename $(CONTAINER_RUNTIME)),podman)
 	$(CONTAINER_RUNTIME) run -d \
 		--name $(CONTAINER_NAME) \
-		-p $(PORT_MAIN):4000 \
-		-v "$$(pwd)/docs:/app:Z" \
+		-p $(PORT):4000 \
+		-v "$$(pwd):/app:Z" \
 		-w /app \
-		$(IMAGE_NAME) jekyll serve --host 0.0.0.0 --port 4000
+		$(IMAGE_NAME)
 else
 	$(CONTAINER_RUNTIME) run -d \
 		--name $(CONTAINER_NAME) \
-		-p $(PORT_MAIN):4000 \
-		-v "$$(pwd)/docs:/app" \
+		-p $(PORT):4000 \
+		-v "$$(pwd):/app" \
 		-w /app \
-		$(IMAGE_NAME) jekyll serve --host 0.0.0.0 --port 4000
+		$(IMAGE_NAME)
 endif
-	@echo -e "$(GREEN)[INFO]$(NC) Main site running at: http://localhost:$(PORT_MAIN)"
+	@echo -e "$(GREEN)[SUCCESS]$(NC) Site is running at http://localhost:$(PORT)"
 
-stop-main: ## Stop and remove main site container
-	@echo -e "$(GREEN)[INFO]$(NC) Stopping main site container..."
-	@$(CONTAINER_RUNTIME) stop $(CONTAINER_NAME) >/dev/null 2>&1 || true
-	@$(CONTAINER_RUNTIME) rm $(CONTAINER_NAME) >/dev/null 2>&1 || true
+stop: ## Stop the Jekyll container
+	@echo -e "$(YELLOW)[INFO]$(NC) Stopping Jekyll container..."
+	@$(CONTAINER_RUNTIME) stop $(CONTAINER_NAME) 2>/dev/null || true
+	@$(CONTAINER_RUNTIME) rm $(CONTAINER_NAME) 2>/dev/null || true
 
-logs-main: ## Show logs for main site container
-	@echo -e "$(GREEN)[INFO]$(NC) Showing main site logs..."
-	$(CONTAINER_RUNTIME) logs -f $(CONTAINER_NAME)
+logs: ## Show container logs
+	@$(CONTAINER_RUNTIME) logs -f $(CONTAINER_NAME)
 
-build-main: ## Build the Jekyll main site
-	@echo -e "$(GREEN)[INFO]$(NC) Building Jekyll main site..."
-ifeq ($(shell basename $(CONTAINER_RUNTIME)),podman)
-	$(CONTAINER_RUNTIME) run --rm -v "$$(pwd)/docs:/app:Z" -w /app $(IMAGE_NAME) jekyll build
-else
-	$(CONTAINER_RUNTIME) run --rm -v "$$(pwd)/docs:/app" -w /app $(IMAGE_NAME) jekyll build
-endif
-	@echo -e "$(GREEN)[INFO]$(NC) Main site built successfully in _site directory!"
+build: ## Build the Jekyll site
+	@echo -e "$(GREEN)[INFO]$(NC) Building Jekyll site..."
+	$(CONTAINER_RUNTIME) run --rm \
+		-v "$$(pwd):/app" \
+		-w /app \
+		$(IMAGE_NAME) bundle exec jekyll build
+
+clean: ## Clean Jekyll build files
+	@echo -e "$(YELLOW)[INFO]$(NC) Cleaning Jekyll build files..."
+	@rm -rf _site .jekyll-cache .sass-cache

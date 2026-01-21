@@ -1,7 +1,0 @@
-name: Montèzes
-baseurl: ""
-description: Le Bancel des Montèzes
-highlighter: rouge
-docs: true
-markdown: kramdown
-gemVersion: 2.0.3-SNAPSHOT
