@@ -1,0 +1,17 @@
+{
+  "MD013": false,
+  "MD033": false,
+  "MD041": false,
+  "MD022": false,
+  "MD024": false,
+  "MD026": false,
+  "MD032": false,
+  "MD034": false,
+  "MD036": false,
+  "MD046": {
+    "style": "fenced"
+  },
+  "MD049": {
+    "style": "underscore"
+  }
+}
