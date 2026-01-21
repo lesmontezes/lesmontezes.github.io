@@ -38,6 +38,8 @@ jobs:
               run: |
                   bundle config set --local deployment false
                   bundle config set --local frozen false
+                  bundle lock --add-platform x86_64-linux
+                  bundle lock --add-platform ruby
                   bundle install
 
             - name: Setup Pages
