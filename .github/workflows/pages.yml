@@ -32,7 +32,13 @@ jobs:
               uses: ruby/setup-ruby@v1
               with:
                   ruby-version: "4.0" # Ruby version to match your Dockerfile
-                  bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+                  bundler-cache: false # Disable automatic caching to avoid lockfile issues
+
+            - name: Install dependencies
+              run: |
+                  bundle config set --local deployment false
+                  bundle config set --local frozen false
+                  bundle install
 
             - name: Setup Pages
               id: pages
