@@ -51,3 +51,7 @@ exclude:
   - Makefile
   - README.md
   - backup_content/
+  - .github/
+  - .vscode/
+  - Makefile
+  - README.md

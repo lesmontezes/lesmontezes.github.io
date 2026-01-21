@@ -76,3 +76,7 @@ Run `make help` to see all available commands:
 ```bash
 make help
 ```
+
+## Deployment
+
+Simply push your changes to the `main` branch to automatically deploy your site to GitHub Pages, visible [here](https://lesmontezes.github.io).
