@@ -21,7 +21,7 @@ endif
 
 .DEFAULT_GOAL := help
 
-.PHONY: help build-jekyll-image dev stop logs build clean
+.PHONY: help build-jekyll-image dev stop logs build clean build-css watch-css
 
 help: ## Show this help message
 	@echo "Jekyll 4.4 Container Management"
@@ -36,7 +36,7 @@ build-jekyll-image: ## Build the Jekyll 4.4 Docker image
 	@echo -e "$(GREEN)[INFO]$(NC) Building Jekyll 4.4 Docker image..."
 	$(CONTAINER_RUNTIME) build -t $(IMAGE_NAME) .
 
-dev: stop ## Run Jekyll development server on port 4000
+dev: stop build-css ## Build CSS and run Jekyll development server on port 4000
 	@echo -e "$(GREEN)[INFO]$(NC) Starting Jekyll server on :$(PORT)..."
 ifeq ($(shell basename $(CONTAINER_RUNTIME)),podman)
 	$(CONTAINER_RUNTIME) run -d \
@@ -73,3 +73,18 @@ build: ## Build the Jekyll site
 clean: ## Clean Jekyll build files
 	@echo -e "$(YELLOW)[INFO]$(NC) Cleaning Jekyll build files..."
 	@rm -rf _site .jekyll-cache .sass-cache
+
+build-css: ## Build Tailwind CSS using Node.js container
+	@echo -e "$(GREEN)[INFO]$(NC) Building Tailwind CSS..."
+	@$(CONTAINER_RUNTIME) run --rm \
+		-v "$$(pwd):/app" \
+		-w /app \
+		node:18-alpine sh -c "npm install > /dev/null 2>&1 && npx tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --minify"
+	@echo -e "$(GREEN)[SUCCESS]$(NC) Tailwind CSS built successfully!"
+
+watch-css: ## Watch and rebuild CSS on changes
+	@echo -e "$(GREEN)[INFO]$(NC) Watching Tailwind CSS for changes..."
+	@$(CONTAINER_RUNTIME) run --rm \
+		-v "$$(pwd):/app" \
+		-w /app \
+		node:18-alpine sh -c "npm install > /dev/null 2>&1 && npx tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch"

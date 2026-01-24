@@ -12,11 +12,20 @@ RUN apk add --no-cache \
 # Set the working directory
 WORKDIR /app
 
-# Copy Gemfile and Gemfile.lock
+# Copy Gemfile and package.json
 COPY Gemfile* ./
+COPY package*.json ./
 
-# Install gems
-RUN bundle install
+# Install gems and npm dependencies
+RUN bundle install && npm install
+
+# Copy source files needed for Tailwind build
+COPY assets/ ./assets/
+COPY tailwind.config.js ./
+COPY postcss.config.js ./
+
+# Build Tailwind CSS in the container
+RUN ./node_modules/.bin/tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --minify
 
 # Expose port 4000
 EXPOSE 4000

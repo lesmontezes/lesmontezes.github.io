@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta
+      name="description"
+      content="{{ page.description | default: site.description }}"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+
+    {% seo %} {% feed_meta %}
+  </head>
+  <body class="font-sans text-stone-800 bg-stone-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-stone-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex-shrink-0">
+            <a
+              href="{{ '/' | relative_url }}"
+              class="text-2xl font-serif font-bold text-olive-700"
+            >
+              Les Montèzes
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="{{ '/' | relative_url }}"
+                class="text-stone-700 hover:text-olive-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Accueil</a
+              >
+              <a
+                href="/contact"
+                class="text-stone-700 hover:text-olive-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>{{ content }}</main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-stone-200">
+      <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <p class="text-sm">
+            &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. Tous droits
+            réservés.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

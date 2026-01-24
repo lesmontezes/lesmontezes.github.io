@@ -34,6 +34,12 @@ jobs:
                   ruby-version: "4.0" # Ruby version to match your Dockerfile
                   bundler-cache: false # Disable automatic caching to avoid lockfile issues
 
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "18"
+                  cache: "npm"
+
             - name: Install dependencies
               run: |
                   bundle config set --local deployment false
@@ -41,6 +47,10 @@ jobs:
                   bundle lock --add-platform x86_64-linux
                   bundle lock --add-platform ruby
                   bundle install
+                  npm install
+
+            - name: Build Tailwind CSS
+              run: npm run build-css-prod
 
             - name: Setup Pages
               id: pages
