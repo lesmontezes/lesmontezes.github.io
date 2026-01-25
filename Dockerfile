@@ -5,14 +5,12 @@ FROM ruby:4.0-alpine
 RUN apk add --no-cache \
     build-base \
     git \
-    tzdata \
-    nodejs \
-    npm
+    tzdata
 
 # Set the working directory
 WORKDIR /app
 
-# Copy Gemfile and Gemfile.lock
+# Copy Gemfile* files
 COPY Gemfile* ./
 
 # Install gems

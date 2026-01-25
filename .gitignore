@@ -10,6 +10,12 @@ _site/
 # Additional Ruby/bundler ignore for when you run: bundle install
 /vendor
 
+# Node.js dependencies
+node_modules/
+
+# Generated Tailwind CSS (will be built during deployment)
+assets/css/style.css
+
 # Specific ignore for GitHub Pages
 # GitHub Pages will always use its own deployed version of pages-gem
 # This means GitHub Pages will NOT use your Gemfile.lock and therefore it is

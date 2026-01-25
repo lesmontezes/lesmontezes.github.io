@@ -1,0 +1,23 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom components for the olive grove website */
+@layer components {
+  .btn-primary {
+    @apply bg-olive-600 hover:bg-olive-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-stone-200 hover:bg-stone-300 text-stone-800 font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+
+  .hero-section {
+    @apply bg-gradient-to-b from-olive-50 to-stone-50 py-16;
+  }
+}
