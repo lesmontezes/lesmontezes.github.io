@@ -27,7 +27,10 @@
   </head>
   <body class="font-sans text-stone-800 bg-stone-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm border-b border-stone-200">
+    <nav
+      class="bg-white shadow-sm border-b border-stone-200"
+      aria-label="Navigation principale"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
           <div class="flex-shrink-0">
@@ -38,6 +41,8 @@
               Les Montèzes
             </a>
           </div>
+
+          <!-- Desktop Navigation -->
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <a
@@ -52,12 +57,72 @@
               >
             </div>
           </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-stone-700 hover:text-olive-700 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-olive-500 focus:ring-offset-2"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              aria-label="Ouvrir le menu principal"
+            >
+              <!-- Hamburger icon -->
+              <svg
+                class="hamburger-icon block h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <!-- Close icon -->
+              <svg
+                class="close-icon hidden h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu md:hidden hidden" id="mobile-menu">
+          <div
+            class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-stone-200"
+          >
+            <a
+              href="{{ '/' | relative_url }}"
+              class="text-stone-700 hover:text-olive-700 hover:bg-stone-50 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              >Accueil</a
+            >
+            <a
+              href="/contact"
+              class="text-stone-700 hover:text-olive-700 hover:bg-stone-50 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              >Contact</a
+            >
+          </div>
         </div>
       </div>
     </nav>
 
     <!-- Main Content -->
-    <main>{{ content }}</main>
+    <main id="main-content">{{ content }}</main>
 
     <!-- Footer -->
     <footer class="bg-stone-800 text-stone-200">
@@ -70,5 +135,47 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.querySelector(".mobile-menu-button");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const hamburgerIcon = document.querySelector(".hamburger-icon");
+        const closeIcon = document.querySelector(".close-icon");
+
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener("click", function () {
+            const isExpanded =
+              mobileMenuButton.getAttribute("aria-expanded") === "true";
+
+            // Toggle menu visibility
+            mobileMenu.classList.toggle("hidden");
+
+            // Toggle icons
+            hamburgerIcon.classList.toggle("hidden");
+            hamburgerIcon.classList.toggle("block");
+            closeIcon.classList.toggle("hidden");
+            closeIcon.classList.toggle("block");
+
+            // Update aria-expanded attribute
+            mobileMenuButton.setAttribute("aria-expanded", !isExpanded);
+          });
+
+          // Close mobile menu when clicking on a link
+          const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+          mobileMenuLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              mobileMenu.classList.add("hidden");
+              hamburgerIcon.classList.remove("hidden");
+              hamburgerIcon.classList.add("block");
+              closeIcon.classList.add("hidden");
+              closeIcon.classList.remove("block");
+              mobileMenuButton.setAttribute("aria-expanded", "false");
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>
