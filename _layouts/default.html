@@ -144,9 +144,7 @@
 
             // Toggle icons
             hamburgerIcon.classList.toggle("hidden");
-            hamburgerIcon.classList.toggle("block");
             closeIcon.classList.toggle("hidden");
-            closeIcon.classList.toggle("block");
 
             // Update aria-expanded attribute
             mobileMenuButton.setAttribute("aria-expanded", !isExpanded);
@@ -158,9 +156,7 @@
             link.addEventListener("click", function () {
               mobileMenu.classList.add("hidden");
               hamburgerIcon.classList.remove("hidden");
-              hamburgerIcon.classList.add("block");
               closeIcon.classList.add("hidden");
-              closeIcon.classList.remove("block");
               mobileMenuButton.setAttribute("aria-expanded", "false");
             });
           });
