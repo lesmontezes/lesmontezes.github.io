@@ -4,9 +4,9 @@ title: "Accueil"
 ---
 
 
-## Bienvenue au Domaine de l’Olivier des Montèzes
+## Bienvenue au Domaine l’Olivier des Montèzes
 
-Niché dans un charmant hameau au pied des Cévennes, le Domaine de l’Olivier des Montèzes propose trois logements accueillants, entourés de paysages préservés. Entre charme, simplicité et authenticité, c’est un lieu où l’on prend le temps de se ressourcer, de partager et de savourer la vie.
+Niché dans un charmant hameau au pied des Cévennes, le Domaine l’Olivier des Montèzes propose trois logements accueillants, entourés de paysages préservés. Entre charme, simplicité et authenticité, c’est un lieu où l’on prend le temps de se ressourcer, de partager et de savourer la vie.
 
 ## Les logements
 
@@ -28,16 +28,16 @@ Le domaine, entièrement réservé à nos hôtes, invite à la détente et au pa
 - Des grills pour vos barbecues.
 - Notre jardin d’oliviers, perché au-dessus du hameau, offrant une vue imprenable sur le château de Fressac.
 
-## Tout proche
+## À proximité
 
-À proximité immédiate, plusieurs lieux méritent une visite ou facilitent votre séjour :
+Plusieurs lieux méritent une visite ou facilitent votre séjour :
 
 - Le hameau des Montèzes — Site historique abritant la plaque commémorative du [premier synode du Désert](https://fr.wikipedia.org/wiki/Fichier:Plaque_comm%C3%A9morative_du_premier_synode_du_D%C3%A9sert,_aux_Mont%C3%A8zes.jpg)
 - Monoblet (5 km) — Village typique avec sa boulangerie et son bureau de poste.
 - Saint-Hippolyte-du-Fort (10 km) — Commerces, marché artisanal, restaurants et pharmacie.
 - Anduze (15 km) — Célèbre pour ses marchés, ses poteries, le [train à vapeur des Cévennes](https://www.trainavapeur.com/), sa [bambouseraie](https://www.bambouseraie.fr/) et autres activités nature, ainsi que ses nombreux restaurants.
 
-## De grandes villes à proximité
+## Les grandes villes
 
 Pour une excursion culturelle ou une journée de découverte, plusieurs villes se trouvent à moins d’une heure de route :
 
@@ -57,4 +57,4 @@ Quelques informations utiles pour préparer votre séjour :
 
 ---
 
-_Le Domaine de l'Olivier des Montèzes vous offre un cadre préservé pour vivre une ou quelques semaines en dehors du temps._
+_Le Domaine l'Olivier des Montèzes vous offre un cadre préservé pour vivre une ou quelques semaines en dehors du temps._

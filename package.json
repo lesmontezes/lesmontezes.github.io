@@ -1,7 +1,7 @@
 {
   "name": "lesmontezes-website",
   "version": "1.0.0",
-  "description": "Jekyll site with Tailwind CSS for Le Domaine de l'Olivier des Montèzes",
+  "description": "Jekyll site with Tailwind CSS for Le Domaine l'Olivier des Montèzes",
   "scripts": {
     "build-css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
     "build-css-prod": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --minify",

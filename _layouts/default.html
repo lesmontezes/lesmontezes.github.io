@@ -25,7 +25,7 @@
 
     {% seo %} {% feed_meta %}
   </head>
-  <body class="font-sans text-stone-800 bg-stone-50">
+  <body class="font-sans text-stone-600 bg-stone-50">
     <!-- Navigation -->
     <nav
       class="bg-white shadow-sm border-b border-stone-200"
@@ -36,9 +36,9 @@
           <div class="flex-shrink-0">
             <a
               href="{{ '/' | relative_url }}"
-              class="text-2xl font-serif font-bold text-olive-700"
+              class="text-2xl font-serif font-bold text-olive-500 hover:text-olive-300 transition-colors"
             >
-              Les Montèzes
+              {{ site.title }}
             </a>
           </div>
 
@@ -47,13 +47,8 @@
             <div class="ml-10 flex items-baseline space-x-4">
               <a
                 href="{{ '/' | relative_url }}"
-                class="text-stone-700 hover:text-olive-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                class="text-olive-500 hover:text-olive-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >Accueil</a
-              >
-              <a
-                href="/contact"
-                class="text-stone-700 hover:text-olive-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >Contact</a
               >
             </div>
           </div>
@@ -62,7 +57,7 @@
           <div class="md:hidden">
             <button
               type="button"
-              class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-stone-700 hover:text-olive-700 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-olive-500 focus:ring-offset-2"
+              class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-olive-500 hover:text-olive-300 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-olive-500 focus:ring-offset-2"
               aria-controls="mobile-menu"
               aria-expanded="false"
               aria-label="Ouvrir le menu principal"
@@ -108,13 +103,8 @@
           >
             <a
               href="{{ '/' | relative_url }}"
-              class="text-stone-700 hover:text-olive-700 hover:bg-stone-50 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              class="text-olive-500 hover:text-olive-300 hover:bg-stone-50 block px-3 py-2 rounded-md text-base font-medium transition-colors"
               >Accueil</a
-            >
-            <a
-              href="/contact"
-              class="text-stone-700 hover:text-olive-700 hover:bg-stone-50 block px-3 py-2 rounded-md text-base font-medium transition-colors"
-              >Contact</a
             >
           </div>
         </div>
@@ -122,7 +112,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main id="main-content">{{ content }}</main>
+    <main id="main-content" class="text-justify-improved">{{ content }}</main>
 
     <!-- Footer -->
     <footer class="bg-stone-800 text-stone-200">
