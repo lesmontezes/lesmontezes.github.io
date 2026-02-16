@@ -10,7 +10,7 @@
   }
 
   .btn-secondary {
-    @apply bg-stone-200 hover:bg-stone-300 text-stone-800 font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+    @apply bg-stone-200 hover:bg-stone-300 text-stone-600 font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
   }
 
   .card {
@@ -20,4 +20,27 @@
   .hero-section {
     @apply bg-gradient-to-b from-olive-50 to-stone-50 py-16;
   }
+}
+
+/* Custom utilities for text justification */
+@layer utilities {
+  .text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .text-justify-improved {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+  }
+}
+
+/* Override prose styles for justified text */
+.prose.text-justify p,
+.prose.text-justify li {
+  text-align: justify;
+  text-justify: inter-word;
 }

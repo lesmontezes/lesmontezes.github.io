@@ -3,12 +3,9 @@ layout: default
 ---
 
 <!-- Hero Section -->
-<section class="hero-section" aria-label="Hero section">
+<section class="hero-section text-stone-600" aria-label="Hero section">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 class="text-4xl md:text-6xl font-serif font-bold text-stone-800 mb-6">
-      Domaine de l'Olivier des Montèzes
-    </h1>
-    <p class="text-xl text-stone-600 mb-8 max-w-3xl mx-auto">
+    <p class="text-4xl my-10 max-w-3xl mx-auto hyphens-manual">
       {{ site.description }}
     </p>
   </div>
@@ -16,8 +13,12 @@ layout: default
 
 <!-- Content -->
 <div
-  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-stone-600"
   aria-label="Main content"
 >
-  <div class="prose prose-lg max-w-none">{{ content }}</div>
+  <div
+    class="prose prose-lg prose-stone max-w-none text-justify-improved prose-headings:text-stone-600 prose-strong:text-stone-600"
+  >
+    {{ content }}
+  </div>
 </div>

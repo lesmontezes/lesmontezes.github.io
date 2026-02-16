@@ -1,6 +1,6 @@
-# Le Domaine de l'Olivier des Montèzes - Website
+# Le Domaine l'Olivier des Montèzes - Website
 
-A Jekyll 4.4 website for Le Domaine de l'Olivier des Montèzes, built with modern Jekyll and containerized for easy development.
+A Jekyll 4.4 website for Le Domaine l'Olivier des Montèzes, built with modern Jekyll and containerized for easy development.
 
 ## Quick Start
 
