@@ -20,9 +20,9 @@ paginate_path: "/page:num/"
 
 # Collections
 collections:
-  properties:
+  logements:
     output: true
-    permalink: /:collection/:name/
+    permalink: /logements/:slug/
 
 # Defaults
 defaults:

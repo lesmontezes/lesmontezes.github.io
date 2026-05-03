@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<!-- Hero Section for Logement -->
+<section class="hero-section text-stone-600" aria-label="En-tête du logement">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1
+      class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-stone-700"
+    >
+      {{ page.title }}
+    </h1>
+
+    {% if page.keywords %}
+    <div class="flex flex-wrap justify-center gap-2 mb-8">
+      {% for keyword in page.keywords %}
+      <span
+        class="inline-flex items-center px-3 py-1 rounded-full bg-olive-100 text-olive-700 text-sm font-medium border border-olive-200"
+      >
+        {{ keyword }}
+      </span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Content Section -->
+<div
+  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-stone-600"
+  aria-label="Description du logement"
+>
+  <div
+    class="prose prose-lg prose-stone max-w-none text-justify-improved prose-headings:text-stone-600 prose-strong:text-stone-600"
+  >
+    {{ content }}
+  </div>
+</div>
+
+<!-- Photo Gallery Section -->
+{% if page.photos %}
+  {% assign photos_root_path = page.photos_root_path %}
+  {% assign gallery_sections = "exterieur::L'extérieur::Photo gallery exterieur|interieur-jour::L'intérieur::Photo gallery interieur jour|interieur-nuit::Partie nuit::Photo gallery interieur nuit" | split: '|' %}
+
+  {% for section_entry in gallery_sections %}
+    {% assign section_parts = section_entry | split: '::' %}
+    {% assign section_key = section_parts[0] %}
+    {% assign section_title = section_parts[1] %}
+    {% assign section_aria = section_parts[2] %}
+    {% assign section_photos = page.photos[section_key] %}
+
+    {% if section_photos %}
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16" aria-label="{{ section_aria }}">
+      <h2 class="text-3xl font-playfair font-bold text-stone-700 text-center mb-8">{{ section_title }}</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pswp-gallery">
+        {% for photo in section_photos %}
+        {% include logement-gallery-card.html photo=photo photos_root_path=photos_root_path %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+
+{% endif %}

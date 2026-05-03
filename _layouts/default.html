@@ -23,6 +23,11 @@
       href="{{ '/assets/css/style.css' | relative_url }}"
     />
 
+    {% if page.layout == 'logement' %}
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.4/dist/photoswipe.css" />
+    <link rel="stylesheet" href="{{ '/assets/css/logement-photoswipe.css' | relative_url }}" />
+    {% endif %}
+
     {% seo %} {% feed_meta %}
   </head>
   <body class="font-sans text-stone-600 bg-stone-50">
@@ -125,6 +130,10 @@
         </div>
       </div>
     </footer>
+
+    {% if page.layout == 'logement' %}
+    <script type="module" src="{{ '/assets/js/logement-photoswipe.js' | relative_url }}"></script>
+    {% endif %}
 
     <!-- Mobile Menu JavaScript -->
     <script>
