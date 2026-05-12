@@ -33,9 +33,9 @@ defaults:
       layout: "post"
   - scope:
       path: ""
-      type: "properties"
+      type: "logements"
     values:
-      layout: "property"
+      layout: "logement"
 
 # Exclude from processing
 exclude:
