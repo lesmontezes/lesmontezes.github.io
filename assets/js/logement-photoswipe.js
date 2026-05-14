@@ -1,4 +1,4 @@
-import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js';
+import PhotoSwipeLightbox from '/assets/vendor/photoswipe/photoswipe-lightbox.esm.min.js';
 
 const lightbox = new PhotoSwipeLightbox({
   gallery: '.pswp-gallery',
@@ -11,7 +11,7 @@ const lightbox = new PhotoSwipeLightbox({
   // Spacing between slides and allow pan to next slide for swipe-like behavior.
   spacing: 0.12,
   allowPanToNext: true,
-  pswpModule: () => import('https://unpkg.com/photoswipe@5.4.4/dist/photoswipe.esm.min.js')
+  pswpModule: () => import('/assets/vendor/photoswipe/photoswipe.esm.min.js')
 });
 
 lightbox.init();

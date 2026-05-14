@@ -24,7 +24,7 @@
     />
 
     {% if page.layout == 'logement' %}
-    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.4/dist/photoswipe.css" />
+      <link rel="stylesheet" href="{{ '/assets/vendor/photoswipe/photoswipe.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/logement-photoswipe.css' | relative_url }}" />
     {% endif %}
 
