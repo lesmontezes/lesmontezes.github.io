@@ -1,0 +1,9 @@
+/* Minimal PhotoSwipe overrides: keep image fitting within the lightbox only. */
+.pswp .pswp__img {
+  object-fit: contain;
+}
+
+/* Animate horizontal slide movement between gallery items. */
+.pswp__container {
+  transition: transform 420ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}

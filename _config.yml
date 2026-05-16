@@ -20,9 +20,9 @@ paginate_path: "/page:num/"
 
 # Collections
 collections:
-  properties:
+  logements:
     output: true
-    permalink: /:collection/:name/
+    permalink: /logements/:slug/
 
 # Defaults
 defaults:
@@ -33,9 +33,9 @@ defaults:
       layout: "post"
   - scope:
       path: ""
-      type: "properties"
+      type: "logements"
     values:
-      layout: "property"
+      layout: "logement"
 
 # Exclude from processing
 exclude:
@@ -57,5 +57,5 @@ exclude:
   - backup_content/
   - .github/
   - .vscode/
-  - Makefile
-  - README.md
+  - process_webp.sh
+  - download_vendor_assets.sh

@@ -23,6 +23,11 @@
       href="{{ '/assets/css/style.css' | relative_url }}"
     />
 
+    {% if page.layout == 'logement' %}
+      <link rel="stylesheet" href="{{ '/assets/vendor/photoswipe/photoswipe.css' | relative_url }}" />
+      <link rel="stylesheet" href="{{ '/assets/css/logement-photoswipe.css' | relative_url }}" />
+    {% endif %}
+
     {% seo %} {% feed_meta %}
   </head>
   <body class="font-sans text-stone-600 bg-stone-50">
@@ -126,6 +131,16 @@
       </div>
     </footer>
 
+    {% if page.layout == 'logement' %}
+    <script
+      id="logement-photoswipe-script"
+      type="module"
+      src="{{ '/assets/js/logement-photoswipe.js' | relative_url }}"
+      data-lightbox-module="{{ '/assets/vendor/photoswipe/photoswipe-lightbox.esm.min.js' | relative_url }}"
+      data-pswp-module="{{ '/assets/vendor/photoswipe/photoswipe.esm.min.js' | relative_url }}"
+    ></script>
+    {% endif %}
+
     <!-- Mobile Menu JavaScript -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -144,9 +159,7 @@
 
             // Toggle icons
             hamburgerIcon.classList.toggle("hidden");
-            hamburgerIcon.classList.toggle("block");
             closeIcon.classList.toggle("hidden");
-            closeIcon.classList.toggle("block");
 
             // Update aria-expanded attribute
             mobileMenuButton.setAttribute("aria-expanded", !isExpanded);
@@ -158,9 +171,7 @@
             link.addEventListener("click", function () {
               mobileMenu.classList.add("hidden");
               hamburgerIcon.classList.remove("hidden");
-              hamburgerIcon.classList.add("block");
               closeIcon.classList.add("hidden");
-              closeIcon.classList.remove("block");
               mobileMenuButton.setAttribute("aria-expanded", "false");
             });
           });

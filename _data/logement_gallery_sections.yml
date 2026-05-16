@@ -1,0 +1,11 @@
+- key: exterieur
+  title: "L'extérieur"
+  aria: "Galerie photo extérieur"
+
+- key: interieur-jour
+  title: "L'intérieur"
+  aria: "Galerie photo intérieur jour"
+
+- key: interieur-nuit
+  title: "Partie nuit"
+  aria: "Galerie photo intérieur nuit"
