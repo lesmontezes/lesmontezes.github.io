@@ -57,5 +57,5 @@ exclude:
   - backup_content/
   - .github/
   - .vscode/
-  - batch_resize_webp.sh
+  - process_webp.sh
   - download_vendor_assets.sh

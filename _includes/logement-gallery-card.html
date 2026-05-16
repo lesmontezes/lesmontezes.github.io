@@ -3,21 +3,26 @@
   {% assign photo_400 = include.photos_root_path | append: '/400/' | append: include.photo.id | append: '-400.webp' %}
   {% assign photo_800 = include.photos_root_path | append: '/800/' | append: include.photo.id | append: '-800.webp' %}
   {% assign photo_1600 = include.photos_root_path | append: '/1600/' | append: include.photo.id | append: '-1600.webp' %}
+  {% assign photo_folder = include.photos_root_path | split: '/' | last %}
+  {% assign generated_dimensions = site.data.photo_dimensions[photo_folder][include.photo.id] %}
+  {% assign photo_width = include.photo.width %}
+  {% assign photo_height = include.photo.height %}
+  {% if generated_dimensions %}
+    {% assign photo_width = generated_dimensions.width %}
+    {% assign photo_height = generated_dimensions.height %}
+  {% endif %}
   {% assign caption_scope = include.photos_root_path | replace: '/', '-' | replace: ' ', '-' %}
   {% assign caption_id = 'photo-caption-' | append: caption_scope | append: '-' | append: include.photo.id %}
-  {% assign fallback_label = 'Voir la photo ' | append: include.photo_index | append: ' du logement' %}
-  {% if include.section_title and include.section_title != '' %}
-    {% assign fallback_label = fallback_label | append: ' - ' | append: include.section_title %}
-  {% endif %}
+  {% assign fallback_label = 'Voir la photo ' | append: include.photo_index | append: ' du logement - ' | append: include.section_title %}
   <figure>
-    <a href="{{ photo_1600 }}" data-pswp-srcset="{{ photo_400 }} 400w, {{ photo_800 }} 800w, {{ photo_1600 }} 1600w" {% if photo_caption != '' %}aria-labelledby="{{ caption_id }}"{% else %}aria-label="{{ fallback_label }}"{% endif %} class="block overflow-hidden">
+    <a href="{{ photo_1600 }}" data-pswp-srcset="{{ photo_400 }} 400w, {{ photo_800 }} 800w, {{ photo_1600 }} 1600w" {% if photo_width and photo_height %}data-pswp-width="{{ photo_width }}" data-pswp-height="{{ photo_height }}"{% endif %} {% if photo_caption != '' %}aria-labelledby="{{ caption_id }}"{% else %}aria-label="{{ fallback_label }}"{% endif %} class="block overflow-hidden">
       <img
         src="{{ photo_400 }}"
         srcset="{{ photo_400 }} 400w, {{ photo_800 }} 800w, {{ photo_1600 }} 1600w"
         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-        {% if include.photo.width and include.photo.height %}
-        width="{{ include.photo.width }}"
-        height="{{ include.photo.height }}"
+        {% if photo_width and photo_height %}
+        width="{{ photo_width }}"
+        height="{{ photo_height }}"
         {% endif %}
         alt=""
         {% comment %} Empty alt: the link name comes from figcaption via aria-labelledby. {% endcomment %}

@@ -21,7 +21,7 @@ endif
 
 .DEFAULT_GOAL := help
 
-.PHONY: help build-jekyll-image dev stop logs build clean build-css watch-css vendor
+.PHONY: help build-jekyll-image dev stop logs build clean build-css watch-css vendor process-webp
 
 help: ## Show this help message
 	@echo "Jekyll 4.4 Container Management"
@@ -93,3 +93,8 @@ vendor: ## Download third-party front-end assets into assets/vendor/
 	@echo -e "$(GREEN)[INFO]$(NC) Downloading vendor assets..."
 	@bash download_vendor_assets.sh
 	@echo -e "$(GREEN)[SUCCESS]$(NC) Vendor assets ready."
+
+process-webp: ## Process original photos into resized WebP files and photo dimensions data
+	@echo -e "$(GREEN)[INFO]$(NC) Processing WebP photos..."
+	@bash process_webp.sh
+	@echo -e "$(GREEN)[SUCCESS]$(NC) Photo processing complete."
