@@ -55,7 +55,7 @@ layout: default
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pswp-gallery">
         {% for photo in section_photos %}
-        {% include logement-gallery-card.html photo=photo photos_root_path=photos_root_path %}
+        {% include logement-gallery-card.html photo=photo photos_root_path=photos_root_path photo_index=forloop.index section_title=section.title %}
         {% endfor %}
       </div>
     </section>

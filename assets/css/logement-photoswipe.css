@@ -7,18 +7,3 @@
 .pswp__container {
   transition: transform 420ms cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-
-/* Clip off-screen neighboring slides during transitions. */
-.pswp__stage {
-  overflow: hidden;
-}
-
-/* Let the overlay UI wrapper ignore pointer events by default. */
-.pswp__ui {
-  pointer-events: none;
-}
-
-/* Re-enable pointer events for actual controls inside the UI. */
-.pswp__ui * {
-  pointer-events: auto;
-}

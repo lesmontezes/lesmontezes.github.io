@@ -1,26 +1,32 @@
-<div class="card hover:shadow-lg transition-shadow duration-300">
+<div class="rounded-xl border border-stone-200 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
   {% assign photo_caption = include.photo.alt | default: '' %}
-  {% assign thumb_width = include.photo.width | default: 400 %}
-  {% assign thumb_height = include.photo.height | default: 300 %}
   {% assign photo_400 = include.photos_root_path | append: '/400/' | append: include.photo.id | append: '-400.webp' %}
   {% assign photo_800 = include.photos_root_path | append: '/800/' | append: include.photo.id | append: '-800.webp' %}
   {% assign photo_1600 = include.photos_root_path | append: '/1600/' | append: include.photo.id | append: '-1600.webp' %}
+  {% assign caption_scope = include.photos_root_path | replace: '/', '-' | replace: ' ', '-' %}
+  {% assign caption_id = 'photo-caption-' | append: caption_scope | append: '-' | append: include.photo.id %}
+  {% assign fallback_label = 'Voir la photo ' | append: include.photo_index | append: ' du logement' %}
+  {% if include.section_title and include.section_title != '' %}
+    {% assign fallback_label = fallback_label | append: ' - ' | append: include.section_title %}
+  {% endif %}
   <figure>
-    <a href="{{ photo_1600 }}" data-pswp-srcset="{{ photo_400 }} 400w, {{ photo_800 }} 800w, {{ photo_1600 }} 1600w" data-pswp-sizes="100vw" aria-label="{% if photo_caption != '' %}{{ photo_caption | escape }}{% else %}Voir la photo du logement{% endif %}">
+    <a href="{{ photo_1600 }}" data-pswp-srcset="{{ photo_400 }} 400w, {{ photo_800 }} 800w, {{ photo_1600 }} 1600w" {% if photo_caption != '' %}aria-labelledby="{{ caption_id }}"{% else %}aria-label="{{ fallback_label }}"{% endif %} class="block overflow-hidden">
       <img
         src="{{ photo_400 }}"
         srcset="{{ photo_400 }} 400w, {{ photo_800 }} 800w, {{ photo_1600 }} 1600w"
         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-        width="{{ thumb_width }}"
-        height="{{ thumb_height }}"
+        {% if include.photo.width and include.photo.height %}
+        width="{{ include.photo.width }}"
+        height="{{ include.photo.height }}"
+        {% endif %}
         alt=""
-        {% comment %} Empty alt: the adjacent <figcaption> already describes the image for screen readers. {% endcomment %}
+        {% comment %} Empty alt: the link name comes from figcaption via aria-labelledby. {% endcomment %}
         loading="lazy"
-        class="block w-full h-64 object-cover overflow-hidden hover:scale-105 transition-transform duration-300"
+        class="block w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-300"
       />
     </a>
     {% if photo_caption != '' %}
-    <figcaption class="p-4 text-sm text-stone-600 text-center">{{ photo_caption }}</figcaption>
+    <figcaption id="{{ caption_id }}" class="p-4 text-sm text-stone-600 text-center">{{ photo_caption }}</figcaption>
     {% endif %}
   </figure>
 </div>
