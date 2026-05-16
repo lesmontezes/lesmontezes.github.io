@@ -57,5 +57,5 @@ exclude:
   - backup_content/
   - .github/
   - .vscode/
-  - Makefile
-  - README.md
+  - batch_resize_webp.sh
+  - download_vendor_assets.sh
