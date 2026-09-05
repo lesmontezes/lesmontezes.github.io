@@ -10,6 +10,10 @@ _site/
 # Additional Ruby/bundler ignore for when you run: bundle install
 /vendor
 
+# Local bundler configuration and locally installed gems (used only for `jekyll serve` locally)
+.bundle/
+/.vendor/
+
 # Node.js dependencies
 node_modules/
 

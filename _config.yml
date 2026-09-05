@@ -23,6 +23,9 @@ collections:
   logements:
     output: true
     permalink: /logements/:slug/
+  logement_galleries:
+    output: true
+    permalink: /logements/:slug/photos/
 
 # Defaults
 defaults:
@@ -36,6 +39,11 @@ defaults:
       type: "logements"
     values:
       layout: "logement"
+  - scope:
+      path: ""
+      type: "logement_galleries"
+    values:
+      layout: "logement-gallery"
 
 # Exclude from processing
 exclude:

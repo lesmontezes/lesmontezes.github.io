@@ -1,0 +1,51 @@
+{% assign included_keys = page.amenities | default: '' %}
+{% assign excluded_keys = page.not_included | default: '' %}
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16" aria-label="Équipements et services">
+  <h2 class="text-3xl font-playfair font-bold text-stone-700 text-center mb-10">Ce que le logement propose</h2>
+
+  {% for group in site.data.logement_amenities %}
+    {% assign included = '' | split: ',' %}
+    {% for item in group.items %}
+      {% if included_keys contains item.key %}
+        {% assign included = included | push: item %}
+      {% endif %}
+    {% endfor %}
+    {% if included.size > 0 %}
+    <div class="mb-8">
+      <h3 class="text-xl font-playfair font-semibold text-stone-700 mb-4">{{ group.section }}</h3>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-3">
+        {% for item in included %}
+        <li class="flex items-center gap-3 text-stone-600">
+          <i class="mdi mdi-{{ item.icon }} text-olive-500 text-xl" aria-hidden="true"></i>
+          <span>{{ item.label }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+  {% assign missing = '' | split: ',' %}
+  {% for group in site.data.logement_amenities %}
+    {% for item in group.items %}
+      {% if excluded_keys contains item.key %}
+        {% unless included_keys contains item.key %}
+          {% assign missing = missing | push: item %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% if missing.size > 0 %}
+  <div class="mt-10 pt-8 border-t border-stone-200">
+    <h3 class="text-xl font-playfair font-semibold text-stone-700 mb-4">Non inclus</h3>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-3 opacity-50">
+      {% for item in missing %}
+      <li class="flex items-center gap-3 text-stone-600">
+        <i class="mdi mdi-{{ item.icon }} text-xl" aria-hidden="true"></i>
+        <span>{{ item.label }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>

@@ -23,7 +23,13 @@
       href="{{ '/assets/css/style.css' | relative_url }}"
     />
 
-    {% if page.layout == 'logement' %}
+    <!-- Material Design Icons (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+    />
+
+    {% if page.layout == 'logement-gallery' %}
       <link rel="stylesheet" href="{{ '/assets/vendor/photoswipe/photoswipe.css' | relative_url }}" />
       <link rel="stylesheet" href="{{ '/assets/css/logement-photoswipe.css' | relative_url }}" />
     {% endif %}
@@ -146,13 +152,15 @@
       </div>
     </footer>
 
-    {% if page.layout == 'logement' %}
+    {% if page.layout == 'logement-gallery' %}
+    {% assign gallery_page_logement = site.logements | where: "slug", page.slug | first %}
     <script
       id="logement-photoswipe-script"
       type="module"
       src="{{ '/assets/js/logement-photoswipe.js' | relative_url }}"
       data-lightbox-module="{{ '/assets/vendor/photoswipe/photoswipe-lightbox.esm.min.js' | relative_url }}"
       data-pswp-module="{{ '/assets/vendor/photoswipe/photoswipe.esm.min.js' | relative_url }}"
+      data-gallery-title="{{ gallery_page_logement.title | default: page.title }}"
     ></script>
     {% endif %}
 

@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+{% assign parent_logement = site.logements | where: "slug", page.slug | first %}
+
+<!-- Hero Section for Gallery -->
+<section class="hero-section text-stone-600" aria-label="En-tête de la galerie photo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1
+      class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-stone-700"
+    >
+      {{ page.title }}
+    </h1>
+
+    {% if parent_logement %}
+    <a
+      href="{{ parent_logement.url | relative_url }}"
+      class="inline-flex items-center gap-2 text-olive-500 hover:text-olive-300 font-medium transition-colors"
+    >
+      <span aria-hidden="true">&larr;</span>
+      Retour &agrave; {{ parent_logement.title }}
+    </a>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Photo Gallery Section -->
+{% if page.photos %}
+  {% assign photos_root_path = page.photos_root_path %}
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 pswp-gallery">
+    {% for section in site.data.logement_gallery_sections %}
+      {% assign section_photos = page.photos[section.key] %}
+
+      {% if section_photos %}
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 py-8" aria-label="{{ section.aria }}">
+        <h2 class="md:col-span-3 text-2xl md:text-3xl font-playfair font-bold text-stone-700 self-start md:sticky md:top-8">
+          {{ section.title }}
+        </h2>
+
+        <div class="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {% for photo in section_photos %}
+          {% include logement-gallery-card.html photo=photo photos_root_path=photos_root_path photo_index=forloop.index section_title=section.title %}
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

@@ -1,0 +1,183 @@
+# Catalog of amenities/équipements available for each logement.
+# Each item is referenced in the logement frontmatter by its `key`.
+# Icons are Material Design Icons (MDI) loaded from the jsDelivr CDN.
+# See AMENITIES.md for the full documentation of supported keys.
+- section: "Cuisine"
+  items:
+    - key: cuisine_equipee
+      icon: chef-hat
+      label: "Cuisine équipée"
+    - key: lave_vaisselle
+      icon: dishwasher
+      label: "Lave-vaisselle"
+    - key: four
+      icon: toaster-oven
+      label: "Four"
+    - key: plaque_cuisson
+      icon: stove
+      label: "Plaques de cuisson"
+    - key: micro_ondes
+      icon: microwave
+      label: "Micro-ondes"
+    - key: grille_pain
+      icon: toaster
+      label: "Grille-pain"
+    - key: cafetiere
+      icon: coffee-maker
+      label: "Machine à café"
+    - key: bouilloire
+      icon: kettle
+      label: "Bouilloire"
+    - key: refrigerateur
+      icon: fridge
+      label: "Réfrigérateur"
+    - key: congelateur
+      icon: fridge-outline
+      label: "Congélateur"
+    - key: vaisselle
+      icon: silverware-fork-knife
+      label: "Vaisselle"
+
+- section: "Confort & Équipements"
+  items:
+    - key: wifi
+      icon: wifi
+      label: "Wifi"
+    - key: television
+      icon: television
+      label: "Télévision"
+    - key: climatisation
+      icon: air-conditioner
+      label: "Climatisation"
+    - key: fraicheur
+      icon: snowflake
+      label: "Fraîcheur en été"
+    - key: chauffage
+      icon: radiator
+      label: "Chauffage"
+    - key: cheminee
+      icon: fireplace
+      label: "Cheminée / Poêle"
+    - key: ventilateur
+      icon: fan
+      label: "Ventilateur"
+    - key: machine_a_laver
+      icon: washing-machine
+      label: "Machine à laver"
+    - key: fer_a_repasser
+      icon: iron
+      label: "Fer à repasser"
+    - key: aspirateur
+      icon: vacuum
+      label: "Aspirateur"
+    - key: seche_cheveux
+      icon: hair-dryer
+      label: "Sèche-cheveux"
+    - key: lit_bebe
+      icon: baby
+      label: "Lit bébé"
+    - key: chaise_haute
+      icon: baby-face-outline
+      label: "Chaise haute"
+    - key: bureau
+      icon: desk
+      label: "Espace de travail"
+    - key: coffre_fort
+      icon: safe
+      label: "Coffre-fort"
+
+- section: "Salle de bain"
+  items:
+    - key: douche
+      icon: shower
+      label: "Douche"
+    - key: baignoire
+      icon: bathtub
+      label: "Baignoire"
+    - key: toilette
+      icon: toilet
+      label: "Toilettes"
+    - key: produits_accueil
+      icon: spray
+      label: "Produits d'accueil"
+
+- section: "Extérieur"
+  items:
+    - key: parking
+      icon: parking
+      label: "Parking privé"
+    - key: terrasse
+      icon: balcony
+      label: "Balcon / Terrasse"
+    - key: jardin
+      icon: tree
+      label: "Jardin / Cour"
+    - key: piscine
+      icon: pool
+      label: "Piscine"
+    - key: barbecue
+      icon: grill
+      label: "Barbecue / Grill"
+    - key: petanque
+      icon: bowling
+      label: "Terrain de pétanque"
+    - key: vue
+      icon: image-filter-hdr
+      label: "Vue dégagée"
+
+- section: "Activités & Loisirs"
+  items:
+    - key: randonnee
+      icon: hiking
+      label: "Randonnée"
+    - key: velo
+      icon: bike
+      label: "Cyclotourisme"
+    - key: canoe
+      icon: kayaking
+      label: "Canoë-kayak"
+    - key: baignade_riviere
+      icon: swim
+      label: "Baignade en rivière"
+    - key: sport
+      icon: dumbbell
+      label: "Sport / Fitness"
+    - key: ping_pong
+      icon: table-tennis
+      label: "Ping-pong"
+    - key: jeux
+      icon: puzzle
+      label: "Jeux de société"
+    - key: musique
+      icon: music
+      label: "Musique / Enceinte"
+    - key: bibliotheque
+      icon: book-open
+      label: "Bibliothèque"
+
+- section: "Services & Sécurité"
+  items:
+    - key: animaux
+      icon: paw
+      label: "Animaux acceptés"
+    - key: pmr
+      icon: wheelchair-accessibility
+      label: "Accessible PMR"
+    - key: famille
+      icon: human-male-female-child
+      label: "Adapté aux familles"
+    - key: detecteur_fumee
+      icon: smoke-detector
+      label: "Détecteur de fumée"
+    - key: extincteur
+      icon: fire-extinguisher
+      label: "Extincteur"
+    - key: alarme
+      icon: shield-alert
+      label: "Alarme"
+    - key: borne_recharge
+      icon: ev-station
+      label: "Borne de recharge"
+    - key: menage
+      icon: broom
+      label: "Ménage possible"

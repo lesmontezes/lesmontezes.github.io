@@ -25,6 +25,57 @@ layout: default
   </div>
 </section>
 
+<!-- Photo Teaser Section -->
+{% assign gallery_page = site.logement_galleries | where: "slug", page.slug | first %}
+{% if gallery_page %}
+  {% assign photos_root_path = page.photos_root_path %}
+  {% assign teaser_photos = '' | split: ',' %}
+  {% for section in site.data.logement_gallery_sections %}
+    {% assign section_photos = gallery_page.photos[section.key] %}
+    {% for photo in section_photos %}
+      {% if teaser_photos.size < 5 %}
+        {% assign teaser_photos = teaser_photos | push: photo %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% if teaser_photos.size > 0 %}
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" aria-label="Aperçu photo du logement">
+    <a
+      href="{{ gallery_page.url | relative_url }}"
+      aria-label="Voir toutes les photos de {{ page.title }}"
+      class="relative grid grid-cols-4 grid-rows-2 gap-2 md:gap-3 rounded-xl overflow-hidden max-w-4xl mx-auto h-64 md:h-80 lg:h-96"
+    >
+      {% for photo in teaser_photos %}
+        {% assign photo_folder = photos_root_path | split: '/' | last %}
+        {% assign photo_dim = site.data.photo_dimensions[photo_folder][photo.id] %}
+        {% assign photo_400 = photos_root_path | append: '/400/' | append: photo.id | append: '-400.webp' %}
+        {% assign photo_800 = photos_root_path | append: '/800/' | append: photo.id | append: '-800.webp' %}
+        {% assign photo_1600 = photos_root_path | append: '/1600/' | append: photo.id | append: '-1600.webp' %}
+        {% assign cell_class = 'col-span-1 row-span-1' %}
+        {% if forloop.first %}{% assign cell_class = 'col-span-2 row-span-2' %}{% endif %}
+        <img
+          src="{{ photo_800 }}"
+          srcset="{{ photo_400 }} 400w, {{ photo_800 }} 800w, {{ photo_1600 }} 1600w"
+          sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+          {% if photo_dim %}width="{{ photo_dim.width }}" height="{{ photo_dim.height }}"{% endif %}
+          alt=""
+          loading="lazy"
+          class="block w-full h-full object-cover {{ cell_class }}"
+        />
+      {% endfor %}
+
+      <span
+        class="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-stone-700 shadow-md"
+      >
+        Voir toutes les photos
+        <span aria-hidden="true">&rarr;</span>
+      </span>
+    </a>
+  </section>
+  {% endif %}
+{% endif %}
+
 <!-- Content Section -->
 <div
   class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-stone-600"
@@ -37,23 +88,4 @@ layout: default
   </div>
 </div>
 
-<!-- Photo Gallery Section -->
-{% if page.photos %}
-  {% assign photos_root_path = page.photos_root_path %}
-  {% for section in site.data.logement_gallery_sections %}
-    {% assign section_photos = page.photos[section.key] %}
-
-    {% if section_photos %}
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16" aria-label="{{ section.aria }}">
-      <h2 class="text-3xl font-playfair font-bold text-stone-700 text-center mb-8">{{ section.title }}</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pswp-gallery">
-        {% for photo in section_photos %}
-        {% include logement-gallery-card.html photo=photo photos_root_path=photos_root_path photo_index=forloop.index section_title=section.title %}
-        {% endfor %}
-      </div>
-    </section>
-    {% endif %}
-  {% endfor %}
-
-{% endif %}
+{% include logement-amenities.html %}

@@ -4,6 +4,7 @@ module.exports = {
     "./_layouts/**/*.html",
     "./_includes/**/*.html",
     "./_logements/**/*.md",
+    "./_logement_galleries/**/*.md",
     "./index.md",
     "./*.html",
     "./*.md",
