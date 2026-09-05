@@ -40,6 +40,12 @@
 
 - section: "Confort & Équipements"
   items:
+    - key: literie_fournie
+      icon: bed
+      label: "Literie fournie"
+    - key: serviettes_fournies
+      icon: shower-head
+      label: "Serviettes fournies"
     - key: wifi
       icon: wifi
       label: "Wifi"
@@ -106,9 +112,9 @@
     - key: parking
       icon: parking
       label: "Parking privé"
-    - key: terrasse
+    - key: balcon
       icon: balcony
-      label: "Balcon / Terrasse"
+      label: "Balcon"
     - key: jardin
       icon: tree
       label: "Jardin / Cour"

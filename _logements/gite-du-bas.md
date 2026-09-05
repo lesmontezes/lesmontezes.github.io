@@ -10,32 +10,39 @@ keywords:
 photos_root_path: "/photos/gite0"
 amenities:
   - cuisine_equipee
+  - four
   - plaque_cuisson
   - micro_ondes
+  - grille_pain
+  - cafetiere
   - refrigerateur
   - vaisselle
-  - wifi
   - fraicheur
-  - chauffage
-  - ventilateur
+  - machine_a_laver
+  - seche_cheveux
   - douche
   - toilette
-  - produits_accueil
   - parking
-  - terrasse
   - jardin
   - piscine
   - barbecue
   - petanque
+  - famille
   - randonnee
   - velo
-  - animaux
   - menage
+  - aspirateur
 not_included:
   - lave_vaisselle
-  - four
   - climatisation
+  - animaux
+  - borne_recharge
+  - wifi
   - television
+  - literie_fournie
+  - serviettes_fournies
+  - produits_accueil
+
 ---
 
 Un gîte de plain-pied sur une cour ombragée.

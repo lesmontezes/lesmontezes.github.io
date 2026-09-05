@@ -56,6 +56,8 @@ catalogue qui ne sont pas dans `amenities` ne sont simplement pas affichés.
 
 | Icône | Clé | Libellé |
 | --- | --- | --- |
+| ![bed](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/bed.svg) | `literie_fournie` | Literie fournie |
+| ![shower-head](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/shower-head.svg) | `serviettes_fournies` | Serviettes fournies |
 | ![wifi](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/wifi.svg) | `wifi` | Wifi |
 | ![television](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/television.svg) | `television` | Télévision |
 | ![air-conditioner](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/air-conditioner.svg) | `climatisation` | Climatisation |
@@ -86,7 +88,7 @@ catalogue qui ne sont pas dans `amenities` ne sont simplement pas affichés.
 | Icône | Clé | Libellé |
 | --- | --- | --- |
 | ![parking](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/parking.svg) | `parking` | Parking privé |
-| ![balcony](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/balcony.svg) | `terrasse` | Balcon / Terrasse |
+| ![balcony](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/balcony.svg) | `balcon` | Balcon |
 | ![tree](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/tree.svg) | `jardin` | Jardin / Cour |
 | ![pool](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/pool.svg) | `piscine` | Piscine |
 | ![grill](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/grill.svg) | `barbecue` | Barbecue / Grill |

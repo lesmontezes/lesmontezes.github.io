@@ -17,29 +17,34 @@ amenities:
   - cafetiere
   - refrigerateur
   - vaisselle
-  - wifi
-  - television
-  - chauffage
+  - ventilateur
   - cheminee
   - machine_a_laver
   - seche_cheveux
-  - bureau
   - douche
   - toilette
-  - produits_accueil
   - parking
-  - terrasse
   - jardin
   - piscine
   - barbecue
-  - vue
+  - petanque
   - famille
+  - randonnee
+  - velo
   - menage
+  - aspirateur
 not_included:
   - lave_vaisselle
   - four
   - climatisation
   - animaux
+  - borne_recharge
+  - wifi
+  - television
+  - literie_fournie
+  - serviettes_fournies
+  - produits_accueil
+
 ---
 
 Un gîte **spacieux** et lumineux, avec salon cathédrale.

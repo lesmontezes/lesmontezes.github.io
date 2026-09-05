@@ -18,30 +18,37 @@ amenities:
   - refrigerateur
   - congelateur
   - vaisselle
-  - wifi
-  - television
+  - ventilateur
+  - cheminee
   - chauffage
   - cheminee
   - machine_a_laver
   - seche_cheveux
-  - bureau
   - douche
-  - baignoire
   - toilette
-  - produits_accueil
   - parking
-  - terrasse
+  - balcon
   - jardin
   - piscine
   - barbecue
+  - petanque
   - vue
   - famille
+  - randonnee
+  - velo
   - menage
+  - aspirateur
 not_included:
   - lave_vaisselle
   - climatisation
   - animaux
   - borne_recharge
+  - wifi
+  - television
+  - literie_fournie
+  - serviettes_fournies
+  - produits_accueil
+
 ---
 
 Un appartement **spacieux**, avec balcon-terrasse abrité et vue dégagée sur la vallée.
