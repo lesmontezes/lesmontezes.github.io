@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Hero Section for Logement -->
-<section class="hero-section text-stone-600" aria-label="En-tête du logement">
+<section class="hero-section text-stone-600 pb-6" aria-label="En-tête du logement">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h1
       class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-stone-700"
@@ -17,6 +17,7 @@ layout: default
       <span
         class="inline-flex items-center px-3 py-1 rounded-full bg-olive-100 text-olive-700 text-sm font-medium border border-olive-200"
       >
+        <i class="mdi mdi-star-outline text-olive-500 text-xl" aria-hidden="true"></i>&nbsp;
         {{ keyword }}
       </span>
       {% endfor %}
@@ -24,6 +25,18 @@ layout: default
     {% endif %}
   </div>
 </section>
+
+<!-- Content Section -->
+<div
+  class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-stone-600"
+  aria-label="Description du logement"
+>
+  <div
+    class="prose prose-lg prose-stone max-w-none text-justify-improved prose-headings:text-stone-600 prose-strong:text-stone-600"
+  >
+    {{ content }}
+  </div>
+</div>
 
 <!-- Photo Teaser Section -->
 {% assign gallery_page = site.logement_galleries | where: "slug", page.slug | first %}
@@ -75,17 +88,5 @@ layout: default
   </section>
   {% endif %}
 {% endif %}
-
-<!-- Content Section -->
-<div
-  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-stone-600"
-  aria-label="Description du logement"
->
-  <div
-    class="prose prose-lg prose-stone max-w-none text-justify-improved prose-headings:text-stone-600 prose-strong:text-stone-600"
-  >
-    {{ content }}
-  </div>
-</div>
 
 {% include logement-amenities.html %}
