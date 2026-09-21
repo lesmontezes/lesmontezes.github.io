@@ -16,17 +16,15 @@ capacity:
     double: 1
     single: 2
 amenities:
-  - cuisine_equipee
   - four
   - plaque_cuisson
   - micro_ondes
-  - grille_pain
   - cafetiere
   - refrigerateur
+  - congelateur
   - vaisselle
   - fraicheur
   - machine_a_laver
-  - seche_cheveux
   - douche
   - toilette
   - parking
@@ -38,7 +36,8 @@ amenities:
   - randonnee
   - velo
   - menage
-  - aspirateur
+  - papier_toilette
+  - detecteur_fumee
 not_included:
   - lave_vaisselle
   - climatisation
@@ -46,8 +45,9 @@ not_included:
   - borne_recharge
   - wifi
   - television
-  - literie_fournie
-  - serviettes_fournies
+  - linge_de_cuisine
+  - linge_de_lit
+  - linge_de_douche
   - produits_accueil
 
 ---
