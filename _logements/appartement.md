@@ -3,6 +3,7 @@ layout: logement
 title: "L'Appartement"
 slug: "appartement"
 type: "appartement"
+nav_order: 1
 keywords:
   - spacieux
   - balcon-terrasse abrité

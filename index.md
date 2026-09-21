@@ -13,8 +13,8 @@ Niché dans un charmant hameau au pied des Cévennes, le Domaine propose trois l
 Trois hébergements au charme naturel accueillent familles, amis ou couples en quête de tranquillité et dépaysement. Confortables et bien équipés, chacun y trouvera son compte :
 
 - **[L'Appartement](/logements/appartement/)** - Vue panoramique sur la vallée. Trois chambres doubles, cuisine équipée, salon.
-- **[Le Gîte du Bas](/logements/gite-du-bas/)** - Fraîcheur et calme. Deux chambres doubles, cuisine équipée, salon.
 - **[Le Gîte du Haut](/logements/gite-du-haut/)** - Lumineux et spacieux. Deux chambres doubles, cuisine équipée, salon cathédrale et mezzanine.
+- **[Le Gîte du Bas](/logements/gite-du-bas/)** - Fraîcheur et calme. Deux chambres doubles, cuisine équipée, salon.
 
 ## Extérieurs et espaces communs
 

@@ -3,6 +3,7 @@ layout: logement
 title: "Le Gîte du Haut"
 slug: "gite-du-haut"
 type: "gite-du-haut"
+nav_order: 2
 keywords:
   - 1er étage
   - spacieux

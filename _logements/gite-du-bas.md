@@ -3,6 +3,7 @@ layout: logement
 title: "Le Gîte du Bas"
 slug: "gite-du-bas"
 type: "gite-du-bas"
+nav_order: 3
 keywords:
   - au frais
   - plain-pied sur cour ombragée
