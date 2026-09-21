@@ -5,10 +5,10 @@ slug: "gite-du-haut"
 type: "gite-du-haut"
 nav_order: 2
 keywords:
-  - 1er étage
-  - spacieux
-  - cuisine équipée
+  - lumineux
   - salon cathédrale
+  - mezzanine
+  - cour ombragée
 photos_root_path: "/photos/gite1"
 capacity:
   guests: 4
@@ -55,5 +55,5 @@ not_included:
 
 ---
 
-Un gîte **spacieux** et lumineux, avec salon cathédrale.
-Cuisine équipée (sans lave-vaisselle, ni four), 2 chambres, 1 mezzanine. Carrelage d'époque, poutres apparentes offrant un charme authentique.
+Voici notre gîte du 1er, **lumineux**, avec son salon cathédrale offrant un charme authentique.
+Cuisine équipée, mezzanine, carrelage d'époque, poutres apparentes.

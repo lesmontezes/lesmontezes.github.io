@@ -5,9 +5,9 @@ slug: "gite-du-bas"
 type: "gite-du-bas"
 nav_order: 3
 keywords:
-  - au frais
-  - plain-pied sur cour ombragée
-  - cuisine simple équipée
+  - frais
+  - plain-pied
+  - cour ombragée
 photos_root_path: "/photos/gite0"
 capacity:
   guests: 4
@@ -53,5 +53,4 @@ not_included:
 
 ---
 
-Un gîte de plain-pied sur une cour ombragée.
-Cuisine simple équipée (sans lave-vaisselle), 2 chambres, toujours **frais** même en cas de canicule.
+Toujours **frais**, voici notre gîte de plain-pied donnant accès sur une cour ombragée avec cuisine simple équipée. Idéal pour les plus sensibles à la chaleur.

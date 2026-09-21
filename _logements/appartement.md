@@ -7,7 +7,7 @@ nav_order: 1
 keywords:
   - spacieux
   - balcon-terrasse abrité
-  - cuisine équipée
+  - vue dégagée
 photos_root_path: "/photos/appart"
 capacity:
   guests: 6
@@ -60,5 +60,5 @@ not_included:
 
 ---
 
-Un appartement **spacieux**, avec balcon-terrasse abrité et vue dégagée sur la vallée.
-Cuisine équipée (sans lave-vaisselle), 3 chambres, poutres apparentes, idéal pour des séjours en famille ou entre amis.
+Voici notre appartement **spacieux**, équipé d'un balcon-terrasse abrité et offrant une vue dégagée sur la vallée.
+Cuisine équipée, poutres apparentes. Idéal pour des séjours en famille ou entre amis.
