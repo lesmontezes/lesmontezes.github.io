@@ -9,6 +9,13 @@ keywords:
   - cuisine équipée
   - salon cathédrale
 photos_root_path: "/photos/gite1"
+capacity:
+  guests: 4
+  bedrooms: 2
+  beds:
+    total: 3
+    double: 1
+    single: 2
 amenities:
   - cuisine_equipee
   - plaque_cuisson

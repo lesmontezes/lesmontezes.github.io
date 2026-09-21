@@ -1,7 +1,20 @@
 {% assign included_keys = page.amenities | default: '' %}
 {% assign excluded_keys = page.not_included | default: '' %}
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16" aria-label="Équipements et services">
-  <h2 class="text-3xl font-playfair font-bold text-stone-700 text-center mb-10">Ce que le logement propose</h2>
+{% assign guests = page.capacity.guests | default: 0 %}
+{% assign bedrooms = page.capacity.bedrooms | default: 0 %}
+{% assign beds = page.capacity.beds.total | default: 0 %}
+{% assign double_bed = page.capacity.beds.double | default: 0 %}
+{% assign single_bed = page.capacity.beds.single | default: 0 %}
+
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16" aria-label="Équipements et services">
+  <h2 class="text-3xl md:text-4xl font-playfair font-bold text-stone-700 text-center mt-10 mb-2">
+    Ce que le logement propose
+  </h2>
+  <div class="text-center text-lg font-normal mb-12">
+    {{ guests }} personnes, {{ bedrooms }} chambres, {{ beds }} lits
+    ( {{ double_bed }}x <i class="mdi mdi-bed-queen-outline text-olive-500 text-2xl align-[-3px]" aria-hidden="true"></i>
+    {{ single_bed }}x <i class="mdi mdi-bed-single-outline text-olive-500 text-2xl align-[-3px]" aria-hidden="true"></i>)
+  </div>
 
   {% for group in site.data.logement_amenities %}
     {% assign included = '' | split: ',' %}

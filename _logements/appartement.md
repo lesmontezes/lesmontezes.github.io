@@ -8,6 +8,13 @@ keywords:
   - balcon-terrasse abrité
   - cuisine équipée
 photos_root_path: "/photos/appart"
+capacity:
+  guests: 6
+  bedrooms: 3
+  beds:
+    total: 5
+    double: 1
+    single: 4
 amenities:
   - cuisine_equipee
   - four

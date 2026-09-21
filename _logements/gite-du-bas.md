@@ -8,6 +8,13 @@ keywords:
   - plain-pied sur cour ombragée
   - cuisine simple équipée
 photos_root_path: "/photos/gite0"
+capacity:
+  guests: 4
+  bedrooms: 2
+  beds:
+    total: 3
+    double: 1
+    single: 2
 amenities:
   - cuisine_equipee
   - four
