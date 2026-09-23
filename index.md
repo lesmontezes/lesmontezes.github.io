@@ -6,22 +6,22 @@ title: "Accueil"
 
 ## Bienvenue au Domaine l’Olivier des Montèzes
 
-Niché dans un charmant hameau au pied des Cévennes, le Domaine propose trois logements accueillants, entourés de paysages préservés. Entre charme, simplicité et authenticité, c’est un lieu où l’on prend le temps de se ressourcer, de partager et de savourer la vie.
+Niché dans un charmant hameau au pied des Cévennes, le Domaine propose trois logements accueillants, entourés de paysages préservés. Entre cachet, simplicité et authenticité, c’est un lieu où l’on prend le temps de se ressourcer, de partager et de savourer la vie.
 
 ## Nos logements
 
-Trois hébergements au charme naturel accueillent familles, amis ou couples en quête de tranquillité et dépaysement. Confortables et bien équipés, chacun y trouvera son compte :
+Trois hébergements au caractère naturel accueillent familles, amis ou couples en quête de tranquillité et dépaysement. Confortables et bien équipés, chacun y trouvera son compte :
 
-- **[L'Appartement](/logements/appartement/)** - Vue panoramique sur la vallée. Trois chambres doubles, cuisine équipée, salon.
+- **[L'Appartement](/logements/appartement/)** - Balcon avec vue panoramique sur la vallée. Trois chambres doubles, cuisine équipée, salon.
+- **[Le Gîte du Haut](/logements/gite-du-haut/)** - Lumineux. Deux chambres doubles, cuisine équipée, salon cathédrale et mezzanine.
 - **[Le Gîte du Bas](/logements/gite-du-bas/)** - Fraîcheur et calme. Deux chambres doubles, cuisine équipée, salon.
-- **[Le Gîte du Haut](/logements/gite-du-haut/)** - Lumineux et spacieux. Deux chambres doubles, cuisine équipée, salon cathédrale et mezzanine.
 
 ## Extérieurs et espaces communs
 
 Le domaine, entièrement réservé à nos hôtes, invite à la détente et au partage au cœur d’un environnement préservé. Plusieurs espaces communs permettent de profiter de la douceur du lieu et de la beauté du paysage :
 
 - Une propriété à flanc de colline, ouverte sur la nature.
-- Une piscine privée, havre de fraîcheur en été.
+- Une piscine privée, source de fraîcheur en été.
 - Un terrain de pétanque pour des moments conviviaux.
 - Des balançoires pour les enfants.
 - Des terrasses ombragées, idéales pour lire ou partager un repas.
@@ -36,6 +36,15 @@ Plusieurs lieux méritent une visite ou facilitent votre séjour :
 - Saint-Hippolyte-du-Fort (10 km) — Commerces, marché artisanal, restaurants et pharmacie.
 - Anduze (15 km) — Célèbre pour ses marchés, ses poteries, le [train à vapeur des Cévennes](https://www.trainavapeur.com/){:target="_blank" rel="noopener noreferrer"}, sa [bambouseraie](https://www.bambouseraie.fr/){:target="_blank" rel="noopener noreferrer"} et autres activités nature, ainsi que ses nombreux restaurants.
 
+## Les marchés artisanaux
+
+- Lundi: Lasalle
+- Mardi soir: Anduze
+- Mercredi: Quissac
+- Jeudi: Anduze & Saint-Jean-du-Gard
+- Vendredi: Saint-Hippolyte-du-Fort & Ganges
+- Samedi: Sommières
+
 ## Les grandes villes
 
 Pour une excursion culturelle ou une journée de découverte, plusieurs villes se trouvent à moins d’une heure de route :
@@ -47,7 +56,7 @@ Pour une excursion culturelle ou une journée de découverte, plusieurs villes s
 ## Activités et loisirs
 
 - Randonnée et vélo sur les nombreux sentiers, pistes et routes de la région, itinéraires adaptés à tous les niveaux.
-- Voie verte.
+- [Voie verte](https://saint-hippolyte-du-fort.fr/loisirs/culture-sports-loisirs-voie-verte/){:target="_blank" rel="noopener noreferrer"}.
 - Canoë-kayak sur l'Hérault, le Vidourle ou le Gardon.
 - Baignade en rivière.
 - Accrobranche.
@@ -63,7 +72,8 @@ Quelques informations utiles pour votre séjour :
 
 - Parking privé au sein de la propriété.
 - Deux accès : le premier réservé au chargement, le second pour le stationnement côté jardin.
-- Literie, linges et serviettes à apporter.
+- Linges de cuisine, linge de lit et linge de douche à apporter.
+- Pour chaque logement, 1 matelas d'appoint à disposition sur demande.
 - Service de ménage de départ possible (50 €).
 - Conteneurs de tri à proximité pour faciliter le recyclage.
 

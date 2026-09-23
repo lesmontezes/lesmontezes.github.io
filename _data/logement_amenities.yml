@@ -2,11 +2,8 @@
 # Each item is referenced in the logement frontmatter by its `key`.
 # Icons are Material Design Icons (MDI) loaded from the jsDelivr CDN.
 # See AMENITIES.md for the full documentation of supported keys.
-- section: "Cuisine"
+- section: "Cuisine équipée"
   items:
-    - key: cuisine_equipee
-      icon: chef-hat
-      label: "Cuisine équipée"
     - key: lave_vaisselle
       icon: dishwasher
       label: "Lave-vaisselle"
@@ -22,9 +19,12 @@
     - key: grille_pain
       icon: toaster
       label: "Grille-pain"
-    - key: cafetiere
+    - key: machine_a_cafe
       icon: coffee-maker
       label: "Machine à café"
+    - key: cafetiere
+      icon: coffee
+      label: "Cafetière italienne"
     - key: bouilloire
       icon: kettle
       label: "Bouilloire"
@@ -36,16 +36,19 @@
       label: "Congélateur"
     - key: vaisselle
       icon: silverware-fork-knife
-      label: "Vaisselle"
+      label: "Vaisselle et ustensiles"
 
 - section: "Confort & Équipements"
   items:
-    - key: literie_fournie
+    - key: linge_de_cuisine
+      icon: silverware-clean
+      label: "Linge de cuisine"
+    - key: linge_de_lit
       icon: bed
-      label: "Literie fournie"
-    - key: serviettes_fournies
+      label: "Linge de lit"
+    - key: linge_de_douche
       icon: shower-head
-      label: "Serviettes fournies"
+      label: "Linge de douche"
     - key: wifi
       icon: wifi
       label: "Wifi"
@@ -63,7 +66,10 @@
       label: "Chauffage"
     - key: cheminee
       icon: fireplace
-      label: "Cheminée / Poêle"
+      label: "Cheminée"
+    - key: poele
+      icon: fireplace
+      label: "Poêle"
     - key: ventilateur
       icon: fan
       label: "Ventilateur"
@@ -92,7 +98,7 @@
       icon: safe
       label: "Coffre-fort"
 
-- section: "Salle de bain"
+- section: "Salle d'eau"
   items:
     - key: douche
       icon: shower
@@ -106,6 +112,10 @@
     - key: produits_accueil
       icon: spray
       label: "Produits d'accueil"
+    - key: papier_toilette
+      icon: paper-roll-outline
+      label: "Papier toilette"
+
 
 - section: "Extérieur"
   items:

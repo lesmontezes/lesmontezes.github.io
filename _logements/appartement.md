@@ -3,17 +3,25 @@ layout: logement
 title: "L'Appartement"
 slug: "appartement"
 type: "appartement"
+nav_order: 1
 keywords:
   - spacieux
   - balcon-terrasse abrité
-  - cuisine équipée
+  - vue dégagée
 photos_root_path: "/photos/appart"
+capacity:
+  guests: 6
+  bedrooms: 3
+  beds:
+    total: 5
+    double: 1
+    single: 4
 amenities:
-  - cuisine_equipee
   - four
   - plaque_cuisson
   - micro_ondes
   - grille_pain
+  - machine_a_cafe
   - cafetiere
   - refrigerateur
   - congelateur
@@ -21,9 +29,7 @@ amenities:
   - ventilateur
   - cheminee
   - chauffage
-  - cheminee
   - machine_a_laver
-  - seche_cheveux
   - douche
   - toilette
   - parking
@@ -38,6 +44,8 @@ amenities:
   - velo
   - menage
   - aspirateur
+  - papier_toilette
+  - detecteur_fumee
 not_included:
   - lave_vaisselle
   - climatisation
@@ -45,11 +53,12 @@ not_included:
   - borne_recharge
   - wifi
   - television
-  - literie_fournie
-  - serviettes_fournies
+  - linge_de_cuisine
+  - linge_de_lit
+  - linge_de_douche
   - produits_accueil
 
 ---
 
-Un appartement **spacieux**, avec balcon-terrasse abrité et vue dégagée sur la vallée.
-Cuisine équipée (sans lave-vaisselle), 3 chambres, poutres apparentes, idéal pour des séjours en famille ou entre amis.
+Voici notre appartement **spacieux**, équipé d'un balcon-terrasse abrité et offrant une vue dégagée sur la vallée.
+Cuisine équipée, poutres apparentes. Idéal pour des séjours en famille ou entre amis.

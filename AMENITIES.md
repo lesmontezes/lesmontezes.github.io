@@ -18,7 +18,6 @@ Dans le front matter d'un logement, référencer les clés souhaitées :
 ```yaml
 amenities:
   - wifi
-  - cuisine_equipee
   - parking
 ```
 
@@ -36,34 +35,36 @@ catalogue qui ne sont pas dans `amenities` ne sont simplement pas affichés.
 
 ## Catalogue
 
-### Cuisine
+### Cuisine équipée
 
 | Icône | Clé | Libellé |
 | --- | --- | --- |
-| ![chef-hat](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/chef-hat.svg) | `cuisine_equipee` | Cuisine équipée |
 | ![dishwasher](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/dishwasher.svg) | `lave_vaisselle` | Lave-vaisselle |
 | ![toaster-oven](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/toaster-oven.svg) | `four` | Four |
 | ![stove](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/stove.svg) | `plaque_cuisson` | Plaques de cuisson |
 | ![microwave](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/microwave.svg) | `micro_ondes` | Micro-ondes |
 | ![toaster](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/toaster.svg) | `grille_pain` | Grille-pain |
-| ![coffee-maker](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/coffee-maker.svg) | `cafetiere` | Machine à café |
+| ![coffee-maker](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/coffee-maker.svg) | `machine_a_cafe` | Machine à café |
+| ![coffee](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/coffee.svg) | `cafetiere` | Cafetière italienne |
 | ![kettle](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/kettle.svg) | `bouilloire` | Bouilloire |
 | ![fridge](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/fridge.svg) | `refrigerateur` | Réfrigérateur |
 | ![fridge-outline](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/fridge-outline.svg) | `congelateur` | Congélateur |
-| ![silverware-fork-knife](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/silverware-fork-knife.svg) | `vaisselle` | Vaisselle |
+| ![silverware-fork-knife](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/silverware-fork-knife.svg) | `vaisselle` | Vaisselle et ustensiles |
 
 ### Confort & Équipements
 
 | Icône | Clé | Libellé |
 | --- | --- | --- |
-| ![bed](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/bed.svg) | `literie_fournie` | Literie fournie |
-| ![shower-head](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/shower-head.svg) | `serviettes_fournies` | Serviettes fournies |
+| ![silverware-clean](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/silverware-clean.svg) | `linge_de_cuisine` | Linge de cuisine |
+| ![bed](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/bed.svg) | `linge_de_lit` | Linge de lit |
+| ![shower-head](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/shower-head.svg) | `linge_de_douche` | Linge de douche |
 | ![wifi](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/wifi.svg) | `wifi` | Wifi |
 | ![television](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/television.svg) | `television` | Télévision |
 | ![air-conditioner](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/air-conditioner.svg) | `climatisation` | Climatisation |
 | ![snowflake](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/snowflake.svg) | `fraicheur` | Fraîcheur en été |
 | ![radiator](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/radiator.svg) | `chauffage` | Chauffage |
-| ![fireplace](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/fireplace.svg) | `cheminee` | Cheminée / Poêle |
+| ![fireplace](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/fireplace.svg) | `cheminee` | Cheminée |
+| ![fireplace](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/fireplace.svg) | `poele` | Poêle |
 | ![fan](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/fan.svg) | `ventilateur` | Ventilateur |
 | ![washing-machine](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/washing-machine.svg) | `machine_a_laver` | Machine à laver |
 | ![iron](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/iron.svg) | `fer_a_repasser` | Fer à repasser |
@@ -74,7 +75,7 @@ catalogue qui ne sont pas dans `amenities` ne sont simplement pas affichés.
 | ![desk](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/desk.svg) | `bureau` | Espace de travail |
 | ![safe](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/safe.svg) | `coffre_fort` | Coffre-fort |
 
-### Salle de bain
+### Salle d'eau
 
 | Icône | Clé | Libellé |
 | --- | --- | --- |
@@ -82,6 +83,7 @@ catalogue qui ne sont pas dans `amenities` ne sont simplement pas affichés.
 | ![bathtub](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/bathtub.svg) | `baignoire` | Baignoire |
 | ![toilet](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/toilet.svg) | `toilette` | Toilettes |
 | ![spray](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/spray.svg) | `produits_accueil` | Produits d'accueil |
+| ![paper-roll-outline](https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/paper-roll-outline.svg) | `papier_toilette` | Papier toilette |
 
 ### Extérieur
 

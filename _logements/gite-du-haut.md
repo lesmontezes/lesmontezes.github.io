@@ -3,24 +3,29 @@ layout: logement
 title: "Le Gîte du Haut"
 slug: "gite-du-haut"
 type: "gite-du-haut"
+nav_order: 2
 keywords:
-  - 1er étage
-  - spacieux
-  - cuisine équipée
+  - lumineux
   - salon cathédrale
+  - mezzanine
+  - cour ombragée
 photos_root_path: "/photos/gite1"
+capacity:
+  guests: 4
+  bedrooms: 2
+  beds:
+    total: 3
+    double: 1
+    single: 2
 amenities:
-  - cuisine_equipee
   - plaque_cuisson
   - micro_ondes
-  - grille_pain
   - cafetiere
   - refrigerateur
+  - congelateur
   - vaisselle
-  - ventilateur
-  - cheminee
+  - poele
   - machine_a_laver
-  - seche_cheveux
   - douche
   - toilette
   - parking
@@ -33,6 +38,8 @@ amenities:
   - velo
   - menage
   - aspirateur
+  - papier_toilette
+  - detecteur_fumee
 not_included:
   - lave_vaisselle
   - four
@@ -41,11 +48,12 @@ not_included:
   - borne_recharge
   - wifi
   - television
-  - literie_fournie
-  - serviettes_fournies
+  - linge_de_cuisine
+  - linge_de_lit
+  - linge_de_douche
   - produits_accueil
 
 ---
 
-Un gîte **spacieux** et lumineux, avec salon cathédrale.
-Cuisine équipée (sans lave-vaisselle, ni four), 2 chambres, 1 mezzanine. Carrelage d'époque, poutres apparentes offrant un charme authentique.
+Voici notre gîte du 1er, **lumineux**, avec son salon cathédrale offrant un charme authentique.
+Cuisine équipée, mezzanine, carrelage d'époque, poutres apparentes.

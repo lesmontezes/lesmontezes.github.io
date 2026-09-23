@@ -37,7 +37,7 @@
     {% seo %} {% feed_meta %}
   </head>
   <body class="font-sans text-stone-600 bg-stone-50">
-    {% assign navigation_logements = site.logements | sort: 'title' %}
+    {% assign navigation_logements = site.logements | sort: 'nav_order' %}
     <!-- Navigation -->
     <nav
       class="bg-white shadow-sm border-b border-stone-200"
