@@ -1,12 +1,9 @@
 - code: fr
   label: Français
-  short_label: FR
   flag: fr
 - code: nl
   label: Nederlands
-  short_label: NL
   flag: nl
 - code: en
   label: English
-  short_label: EN
   flag: gb

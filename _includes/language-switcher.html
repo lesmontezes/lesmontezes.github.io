@@ -12,7 +12,6 @@
     <span class="language-flag inline-flex overflow-hidden rounded-[3px] ring-1 ring-stone-200" data-language-flag>
       {% include language-flag.html flag=default_language.flag class="block h-4 w-6" %}
     </span>
-    <span class="text-xs font-semibold tracking-wide" data-language-short>{{ default_language.short_label }}</span>
     <span class="sr-only" data-language-label>{{ default_language.label }}</span>
     <svg class="language-chevron h-3.5 w-3.5 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
       <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.51a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
@@ -21,7 +20,7 @@
 
   <div
     id="language-switcher-menu"
-    class="language-switcher-menu absolute right-0 z-50 mt-2 w-52 overflow-hidden rounded-xl border border-stone-200 bg-white py-1 shadow-lg"
+    class="language-switcher-menu absolute right-0 z-50 mt-2 w-36 overflow-hidden rounded-xl border border-stone-200 bg-white py-1 shadow-lg"
     role="menu"
     aria-label="Choisir la langue"
     data-language-menu
@@ -36,10 +35,9 @@
       class="flex w-full items-center gap-3 px-3 py-2 text-left text-sm text-stone-700 transition-colors hover:bg-stone-100 focus-visible:bg-stone-100 focus-visible:outline-none"
     >
       <span class="language-flag inline-flex overflow-hidden rounded-[3px] ring-1 ring-stone-200">
-        {% include language-flag.html flag=language.flag short_label=language.short_label class="block h-4 w-6" %}
+        {% include language-flag.html flag=language.flag label=language.label class="block h-4 w-6" %}
       </span>
       <span class="font-medium">{{ language.label }}</span>
-      <span class="ml-auto text-xs font-semibold uppercase tracking-wide text-stone-400">{{ language.short_label }}</span>
     </button>
     {% endfor %}
   </div>
