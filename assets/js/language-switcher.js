@@ -100,10 +100,8 @@
     var entry = findEntry(config, code) || findEntry(config, config.sourceLanguage);
     if (!entry) return;
     setFlagFromOption(root, entry.code);
-    var shortLabel = root.querySelector('[data-language-short]');
     var label = root.querySelector('[data-language-label]');
     var button = root.querySelector('[data-language-button]');
-    if (shortLabel) shortLabel.textContent = entry.short_label || entry.code.toUpperCase();
     if (label) label.textContent = entry.label;
     if (button) button.setAttribute('aria-label', 'Langue : ' + entry.label);
     var options = root.querySelectorAll('[data-language-option]');
